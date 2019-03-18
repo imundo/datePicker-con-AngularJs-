@@ -2,9 +2,6 @@ Angular Datepicker
 ==================
 ![Angular datepicker calendar](http://i.imgur.com/jKfADtA.png)
 
-[![Join the chat at https://gitter.im/720kb/angular-datepicker](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/720kb/angular-datepicker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-
 Angular datepicker is an angularjs directive that generates a datepicker calendar on your input element.
 
 ## Requerimientos minimos
@@ -52,14 +49,14 @@ angular.module('app', [
  ]);
 ```
 
-Call the directive wherever you want in your html page
+Llama a la directiva donde quieras en tu página html.
 
 ```html
 <datepicker>
   <input ng-model="date" type="text"/>
 </datepicker>
 ```
-> By default the ng-model will show a Javascript Date() Object inside your input, you can use the options below to set your preferred date format to.
+>Por defecto, el modelo ng mostrará un objeto de fecha () de Javascript dentro de su entrada, puede usar las opciones a continuación para configurar su formato de fecha preferido para.
 
 
 ## DOC
@@ -92,9 +89,9 @@ datepicker-mobile="" | String | true | Set to `false` to force override of mobil
 ## Options
 Angular datepicker allows you to use some options via `attribute` data
 
-#### Custom titles
+#### Títulos personalizados
 
-You can set the titles for the month and year selectors with the **date-year-title=""** and **date-month-title=""** data attributes (default to is _"select month"_ and _"select year"_)
+Puede configurar los títulos para los selectores de mes y año con la **date-year-title=""** y **date-month-title=""** data attributes (default to is _"select month"_ and _"select year"_)
 
 ```html
 <datepicker date-month-title="selected year">
@@ -106,8 +103,8 @@ You can set the titles for the month and year selectors with the **date-year-tit
 </datepicker>
 ```
 
-#### Highlight today day in  calendar
-To highlight or style the today day in the calendar just use its own CSS class (`._720kb-datepicker-today`) like this:
+#### Destaque el dia de hoy en el calendario
+Para resaltar o diseñar el día de hoy en el calendario, use su propia clase de CSS (`._720kb-datepicker-today`) like this:
 
 ```css
 ._720kb-datepicker-calendar-day._720kb-datepicker-today {
@@ -116,17 +113,15 @@ To highlight or style the today day in the calendar just use its own CSS class (
 }
 ```
 
-#### Custom buttons
-You can customize the calendar navigation buttons content, let's make an example while using [FontAwesome](http://fontawesome.io)
-
 ```html
 <datepicker button-prev="<i class='fa fa-arrow-left'></i>" button-next="<i class='fa fa-arrow-right'></i>">
   <input ng-model="date" type="text"/>
 </datepicker>
 ```
 
-#### Custom buttons titles for arrows
-You can also set the titles for the left and right arrows with **button-next-title=""** for the right and **button-prev-title=""** for the left. By default they are labeled _"next"_ and _"prev"_.
+#### Títulos de botones personalizados para flechas
+También puede configurar los títulos para las flechas izquierda y derecha con ** button-next-title = "" ** para la derecha y ** button-prev-title = "" ** para la izquierda. Por defecto están etiquetados _ "next" _ y _ "prev" _.
+
 
 ```html
 <datepicker button-prev-title="previous month">
@@ -138,8 +133,8 @@ You can also set the titles for the left and right arrows with **button-next-tit
 </datepicker>
 ```
 
-#### Input as grandchild
-Sometimes you cannot put date input as a first child of datepicker. In this case you may use `selector=""` to point to the CSS class of the input. Below example with using Twitter Bootstrap and FontAwesome
+####Entrada como grandchild
+A veces no se puede colocar la entrada de fecha como primer hijo del selector de fechas. En este caso, puede usar `selector =" "` para apuntar a la clase CSS de la entrada. A continuación el ejemplo con el uso de Twitter Bootstrap y FontAwesome
 
 ```html
 <datepicker date-format="yyyy-MM-dd" selector="form-control">
@@ -151,8 +146,8 @@ Sometimes you cannot put date input as a first child of datepicker. In this case
     </div>
 </datepicker>
 ```
-#### Manually show and hide datepicker
-Sometimes you want to (manually/programmatically) show or hide the datepicker, this can be achieved using `datepicker-show` attribute, if `false`, datepicker is hidden, if `true`, datepicker is shown
+#### Mostrar y ocultar manualmente datepicker
+A veces desea (manualmente / programáticamente) mostrar u ocultar el selector de fecha, esto se puede lograr usando el atributo `datepicker-show`, si` false`, datepicker está oculto, si `true`, datepicker se muestra
 
 ```javascript
 .controller('TestController', ['$scope', '$interval', function TestController($scope, $interval) {
@@ -171,8 +166,10 @@ Sometimes you want to (manually/programmatically) show or hide the datepicker, t
 ```
 _tip: you should use this attribute together with `datepicker-toggle="false" , for a better stable behavior of the datepicker_
 
-#### Input as grandchild
-Sometimes you cannot put date input as a first child of datepicker. In this case you may use `selector=""` to point to the CSS class of the input. Below example with using Twitter Bootstrap and FontAwesome
+#### Entrada como grandchild
+A veces no se puede colocar la entrada de fecha como primer hijo del selector de fechas. En este caso puedes usar
+ `selector=""` para apuntar a la clase CSS de la entrada. A continuación el ejemplo con el uso de Twitter Bootstrap y FontAwesome
+
 
 ```html
 <datepicker date-format="yyyy-MM-dd" selector="form-control">
@@ -186,15 +183,15 @@ Sometimes you cannot put date input as a first child of datepicker. In this case
 ```
 ### Tips
 
-#### Date validation
-If you want to validate the input, while user is typing for example, you just have to refer to the `ngModel`.
-As long as you use something like:
+#### Validacion de fecha
+Si tu necesitas validar una fecha, mientras el usario esta ingresando esta,tu tienes que refererla por`ngModel`.
+
 ```html
 <div ng-controller="MyCtrl as ctrl">
 <input datepicker type="text" ng-model="myDate"/>
 </div>
 ```
-You can show validation errors simply validating the ngModel, as you would do for any other type of input, for example:
+Puede mostrar errores de validación simplemente validando el ngModel, como lo haría con cualquier otro tipo de entrada, por ejemplo:
 ```javascript
 .controller('Ctrl', ['$scope', function ($scope) {
   var liveDate;
@@ -223,32 +220,6 @@ Then your final html:
 ```
 
 
-### Example
 
-[Live demo](https://720kb.github.io/angular-datepicker)
 
-## Themes :art:
-You can edit the default Css file `angular-datepicker.css` if you want to make a new theme for the datepicker, then just add it to the ```themes``` dir and PR!
 
-More about it https://github.com/720kb/angular-datepicker/tree/master/themes.
-
-Here is an example of a [Dark Theme](http://codepen.io/45kb/pen/bjslv) made using custom Css.
-
-***_Please note that the example may not be uptodate with the latest angular and/or module version_
-
-## Contributing
-
-We will be much grateful if you help us making this project to grow up.
-Feel free to contribute by forking, opening issues, pull requests etc.
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2014 Filippo Oretti, Dario Andrei
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
