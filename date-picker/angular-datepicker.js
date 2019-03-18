@@ -1039,6 +1039,6 @@
       };
     };
 
-  angular.module('datepicker', [])
+  angular.module('720kb.datepicker', [])
                .directive('datepicker', ['$window', '$compile', '$locale', '$filter', '$interpolate', '$timeout', datepickerDirective]);
 }(angular, navigator));
