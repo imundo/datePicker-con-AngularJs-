@@ -7,23 +7,14 @@ Angular Datepicker
 
 Angular datepicker is an angularjs directive that generates a datepicker calendar on your input element.
 
-The Angularjs Datepicker is developed by [720kb](http://720kb.net).
-
-## Requirements
+## Requerimientos minimos
 
 AngularJS v1.3+
 
-### Browser support
 
-Chrome | Firefox | IE | Opera | Safari
---- | --- | --- | --- | --- |
- ✔ | ✔ | IE9 + | ✔ | ✔ |
+## Carga de dependencia 
 
-
-## Load
-
-To use the directive, include the Angular Datepicker's javascript and css files in your web page:
-
+Para ser usada como directiva, debes incluir archivos de angular Datapicker  javascript y ccs  en tu pagina web:
 ```html
 <!DOCTYPE HTML>
 <html>
@@ -37,7 +28,7 @@ To use the directive, include the Angular Datepicker's javascript and css files 
 </html>
 ```
 
-## Installation
+## Instalacion
 
 #### Bower
 
@@ -52,13 +43,12 @@ $ npm install angularjs-datepicker --save
 
 _then load the js files in your html_
 
-### Add module dependency
-
-Add the 720kb.datepicker module dependency
+### agregar dependencia de modulo
+Add the datepicker module dependency
 
 ```js
 angular.module('app', [
-  '720kb.datepicker'
+  'datepicker'
  ]);
 ```
 
