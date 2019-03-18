@@ -86,8 +86,8 @@ datepicker-show="" | String | false | Trigger the datepicker visibility, if true
  |  | | **tip:** _Do not mix it with datepicker-toggle for a more stable behavior_
 datepicker-mobile="" | String | true | Set to `false` to force override of mobile styles. Especially useful for using desktop-style pagination control in mobile apps.
 
-## Options
-Angular datepicker allows you to use some options via `attribute` data
+## Optiones
+Angular datepicker le permite usar algunas opciones a través de los datos del atributo `attribute` 
 
 #### Títulos personalizados
 
@@ -104,7 +104,7 @@ Puede configurar los títulos para los selectores de mes y año con la **date-ye
 ```
 
 #### Destaque el dia de hoy en el calendario
-Para resaltar o diseñar el día de hoy en el calendario, use su propia clase de CSS (`._720kb-datepicker-today`) like this:
+Para resaltar o diseñar el día de hoy en el calendario, use su propia clase de CSS (`._720kb-datepicker-today`) como esto:
 
 ```css
 ._720kb-datepicker-calendar-day._720kb-datepicker-today {
@@ -164,7 +164,8 @@ A veces desea (manualmente / programáticamente) mostrar u ocultar el selector d
       <input ng-model="date3" type="text" class="angular-datepicker-input"/>
     </datepicker>
 ```
-_tip: you should use this attribute together with `datepicker-toggle="false" , for a better stable behavior of the datepicker_
+_tip: debe usar este atributo junto con `datepicker-toggle =" false ", para un mejor comportamiento estable del datepicker_
+
 
 #### Entrada como grandchild
 A veces no se puede colocar la entrada de fecha como primer hijo del selector de fechas. En este caso puedes usar
@@ -211,7 +212,7 @@ Puede mostrar errores de validación simplemente validando el ngModel, como lo h
 }]);
 ```
 
-Then your final html:
+Entonces su html final:
 ```html
 <div ng-controller="MyCtrl as ctrl">
 <input type="text" ng-model="myDate" datepicker/>
